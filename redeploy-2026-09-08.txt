@@ -1,0 +1,1 @@
+Trigger Vercel production redeploy after embedding the compressed Isiphosendalo Solutions logo in index.html.
