@@ -16,6 +16,7 @@
 
 html {
     scroll-behavior: smooth;
+    scroll-padding-top: 110px;
 }
 
 body {
@@ -25,6 +26,7 @@ body {
     color: var(--text);
     line-height: 1.7;
     font-size: 18px;
+    overflow-x: hidden;
 }
 
 img {
@@ -37,49 +39,65 @@ a {
     text-decoration: none;
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
     margin-top: 0;
     color: var(--primary);
-    text-shadow: 2px 2px 4px rgba(0, 128, 128, 0.25);
+    text-shadow: 2px 2px 4px rgba(0, 128, 128, 0.18);
+    line-height: 1.2;
+}
+
+p {
+    overflow-wrap: anywhere;
 }
 
 header {
-    background: rgba(255, 255, 255, 0.95);
+    background: rgba(255, 255, 255, 0.96);
     border-bottom: 1px solid var(--border);
     position: sticky;
     top: 0;
-    z-index: 10;
-    backdrop-filter: blur(6px);
+    z-index: 50;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
 }
 
 .topbar {
     max-width: 1100px;
     margin: 0 auto;
-    padding: 18px 20px;
+    padding: 14px 20px;
     display: flex;
-    flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
-    gap: 16px;
+    gap: 18px;
 }
 
 .brand {
     display: flex;
     align-items: center;
     gap: 14px;
+    min-width: 0;
+    color: var(--text);
 }
 
 .brand img {
-    width: 72px;
-    height: 72px;
+    width: 66px;
+    height: 66px;
+    flex: 0 0 auto;
+    object-fit: cover;
     border-radius: 50%;
     border: 4px solid var(--accent);
-    box-shadow: 0 0 10px rgba(0, 212, 212, 0.4);
+    box-shadow: 0 0 10px rgba(0, 212, 212, 0.35);
 }
 
 .brand-name {
-    font-size: 1.6rem;
-    font-weight: bold;
+    font-size: clamp(1.2rem, 2vw, 1.6rem);
+    font-weight: 700;
+    line-height: 1.1;
+}
+
+nav {
+    margin-left: auto;
 }
 
 nav ul {
@@ -87,18 +105,25 @@ nav ul {
     margin: 0;
     padding: 0;
     display: flex;
+    align-items: center;
     flex-wrap: wrap;
-    gap: 18px;
+    gap: 16px;
 }
 
 nav a {
+    display: inline-block;
     font-weight: 600;
     color: var(--primary-dark);
-    transition: color 0.2s ease;
+    transition: color 0.2s ease, transform 0.2s ease;
 }
 
 nav a:hover {
     color: var(--accent);
+    transform: translateY(-1px);
+}
+
+.nav-toggle {
+    display: none;
 }
 
 main {
@@ -107,8 +132,12 @@ main {
     padding: 24px 20px 60px;
 }
 
+section {
+    scroll-margin-top: 110px;
+}
+
 .screen {
-    background: rgba(255, 255, 255, 0.75);
+    background: rgba(255, 255, 255, 0.78);
     border: 1px solid var(--border);
     border-radius: 20px;
     box-shadow: var(--shadow);
@@ -122,24 +151,40 @@ main {
     padding-bottom: 40px;
 }
 
+.hero h1 {
+    font-size: clamp(2rem, 5vw, 3.4rem);
+    margin-bottom: 8px;
+}
+
+.hero h2 {
+    margin-top: 6px;
+}
+
 .hero p {
-    max-width: 700px;
-    margin: 0 auto;
-    font-size: 1.1rem;
+    max-width: 720px;
+    margin: 0 auto 14px;
+    font-size: 1.08rem;
+}
+
+.tagline {
+    color: var(--primary-dark);
+    font-weight: 700;
+    letter-spacing: 0.02em;
 }
 
 .hero-logo {
-    margin: 0 auto 20px;
+    margin: 22px auto;
     width: 170px;
     height: 170px;
+    object-fit: cover;
     border-radius: 50%;
     border: 5px solid var(--accent);
-    box-shadow: 0 0 18px rgba(0, 212, 212, 0.4);
+    box-shadow: 0 0 18px rgba(0, 212, 212, 0.35);
     transition: transform 0.3s ease;
 }
 
 .hero-logo:hover {
-    transform: scale(1.08);
+    transform: scale(1.05);
 }
 
 .grid {
@@ -160,14 +205,15 @@ main {
 }
 
 .service-card h3,
-.contact-card h3 {
+.contact-card h3,
+.booking-card h3 {
     margin-bottom: 10px;
 }
 
-.service-card ul {
-    margin: 12px 0 0;
-    padding-left: 18px;
-    color: var(--muted);
+.service-card p,
+.contact-card p,
+.booking-card p {
+    margin-top: 0;
 }
 
 .booking-layout {
@@ -181,6 +227,10 @@ main {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 16px;
+}
+
+.details-field {
+    margin-top: 16px;
 }
 
 label {
@@ -202,6 +252,13 @@ button {
     background: #fff;
 }
 
+input:focus,
+select:focus,
+textarea:focus {
+    outline: 3px solid rgba(0, 212, 212, 0.2);
+    border-color: var(--primary);
+}
+
 textarea {
     min-height: 120px;
     resize: vertical;
@@ -220,6 +277,11 @@ button {
 button:hover {
     transform: translateY(-1px);
     box-shadow: 0 8px 20px rgba(0, 128, 128, 0.18);
+}
+
+#formStatus {
+    min-height: 1.5em;
+    margin-bottom: 0;
 }
 
 .details-list {
@@ -244,6 +306,26 @@ button:hover {
     margin-top: 18px;
 }
 
+.contact-card a {
+    overflow-wrap: anywhere;
+}
+
+.why-us {
+    text-align: center;
+}
+
+.why-us p {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: var(--primary-dark);
+    margin-bottom: 0;
+}
+
+.why-us span {
+    padding: 0 6px;
+    color: var(--accent);
+}
+
 footer {
     background-color: var(--primary-dark);
     color: white;
@@ -255,17 +337,229 @@ footer p {
     margin: 0;
 }
 
-@media (max-width: 768px) {
-    .booking-layout,
-    .form-grid {
-        grid-template-columns: 1fr;
+@media (max-width: 900px) {
+    .topbar {
+        flex-wrap: wrap;
     }
 
-    .topbar {
-        justify-content: center;
+    nav {
+        width: 100%;
+        margin-left: 0;
     }
 
     nav ul {
         justify-content: center;
+    }
+}
+
+@media (max-width: 768px) {
+    html {
+        scroll-padding-top: 82px;
+    }
+
+    body {
+        font-size: 16px;
+        line-height: 1.6;
+    }
+
+    section {
+        scroll-margin-top: 82px;
+    }
+
+    .topbar {
+        padding: 10px 14px;
+        gap: 10px;
+        flex-wrap: wrap;
+    }
+
+    .brand {
+        gap: 10px;
+        max-width: calc(100% - 58px);
+    }
+
+    .brand img {
+        width: 50px;
+        height: 50px;
+        border-width: 3px;
+    }
+
+    .brand-name {
+        font-size: clamp(1rem, 5vw, 1.25rem);
+        overflow-wrap: normal;
+    }
+
+    .nav-toggle {
+        width: 44px;
+        height: 44px;
+        flex: 0 0 44px;
+        display: inline-flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 5px;
+        margin: 0;
+        padding: 0;
+        border-radius: 12px;
+        background: var(--primary);
+        box-shadow: none;
+    }
+
+    .nav-toggle span {
+        width: 22px;
+        height: 2px;
+        background: #fff;
+        border-radius: 999px;
+        transition: transform 0.2s ease, opacity 0.2s ease;
+    }
+
+    .nav-toggle.active span:nth-child(1) {
+        transform: translateY(7px) rotate(45deg);
+    }
+
+    .nav-toggle.active span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .nav-toggle.active span:nth-child(3) {
+        transform: translateY(-7px) rotate(-45deg);
+    }
+
+    nav {
+        display: none;
+        width: 100%;
+        margin: 0;
+    }
+
+    nav.open {
+        display: block;
+    }
+
+    nav ul {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 0;
+        padding: 8px 0 2px;
+    }
+
+    nav li {
+        width: 100%;
+    }
+
+    nav a {
+        display: block;
+        width: 100%;
+        padding: 11px 8px;
+        text-align: center;
+        border-top: 1px solid var(--border);
+        transform: none;
+    }
+
+    main {
+        padding: 14px 12px 40px;
+    }
+
+    .screen {
+        border-radius: 16px;
+        padding: 24px 16px;
+        margin-bottom: 16px;
+    }
+
+    .hero {
+        padding-top: 26px;
+        padding-bottom: 28px;
+    }
+
+    .hero h1 {
+        font-size: clamp(1.9rem, 9vw, 2.6rem);
+    }
+
+    .hero h2 {
+        font-size: clamp(1.35rem, 6vw, 1.75rem);
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    .hero-logo {
+        width: 132px;
+        height: 132px;
+        border-width: 4px;
+        margin: 18px auto;
+    }
+
+    .grid,
+    .booking-layout,
+    .form-grid,
+    .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 14px;
+    }
+
+    .service-card,
+    .booking-card,
+    .contact-card {
+        padding: 18px 14px;
+        border-radius: 14px;
+    }
+
+    input,
+    select,
+    textarea,
+    button {
+        font-size: 16px;
+        min-height: 46px;
+    }
+
+    textarea {
+        min-height: 120px;
+    }
+
+    .why-us p {
+        font-size: 1rem;
+    }
+
+    footer {
+        padding: 16px 14px;
+        font-size: 0.95rem;
+    }
+}
+
+@media (max-width: 420px) {
+    .topbar {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .brand img {
+        width: 44px;
+        height: 44px;
+    }
+
+    .brand-name {
+        font-size: 1rem;
+    }
+
+    main {
+        padding-left: 8px;
+        padding-right: 8px;
+    }
+
+    .screen {
+        padding: 20px 14px;
+        border-radius: 14px;
+    }
+
+    .hero-logo {
+        width: 116px;
+        height: 116px;
+    }
+
+    h2 {
+        font-size: 1.4rem;
+    }
+
+    .why-us span {
+        padding: 0 3px;
     }
 }
