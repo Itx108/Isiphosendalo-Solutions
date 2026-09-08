@@ -1,4 +1,34 @@
 document.addEventListener('DOMContentLoaded', () => {
+    const navToggle = document.getElementById('navToggle');
+    const siteNav = document.getElementById('siteNav');
+
+    const closeMenu = () => {
+        if (!navToggle || !siteNav) return;
+        siteNav.classList.remove('open');
+        navToggle.classList.remove('active');
+        navToggle.setAttribute('aria-expanded', 'false');
+        navToggle.setAttribute('aria-label', 'Open navigation menu');
+    };
+
+    if (navToggle && siteNav) {
+        navToggle.addEventListener('click', () => {
+            const isOpen = siteNav.classList.toggle('open');
+            navToggle.classList.toggle('active', isOpen);
+            navToggle.setAttribute('aria-expanded', String(isOpen));
+            navToggle.setAttribute('aria-label', isOpen ? 'Close navigation menu' : 'Open navigation menu');
+        });
+
+        siteNav.querySelectorAll('a').forEach((link) => {
+            link.addEventListener('click', closeMenu);
+        });
+
+        window.addEventListener('resize', () => {
+            if (window.innerWidth > 768) {
+                closeMenu();
+            }
+        });
+    }
+
     const form = document.getElementById('appointmentForm');
     const status = document.getElementById('formStatus');
 
