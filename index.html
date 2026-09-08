@@ -3,29 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>Isiphosendalo Solutions</title>
-
-    <!-- Favicon -->
-    <link rel="icon" type="image/webp" href="logo.webp">
-
-    <!-- CSS -->
+    <link id="siteFavicon" rel="icon" type="image/webp">
     <link rel="stylesheet" href="style.css">
-
-    <!-- JavaScript -->
     <script src="script.js" defer></script>
 </head>
-
 <body>
-
     <header>
         <div class="topbar">
-
             <div class="brand">
-                <img src="logo.webp" alt="Isiphosendalo Solutions Logo">
+                <img class="embedded-logo" alt="Isiphosendalo Solutions Logo">
                 <div class="brand-name">Isiphosendalo Solutions</div>
             </div>
-
             <nav>
                 <ul>
                     <li><a href="#home">Home</a></li>
@@ -35,410 +24,86 @@
                     <li><a href="#contact">Contact Us</a></li>
                 </ul>
             </nav>
-
         </div>
     </header>
 
-
     <main>
-
-        <!-- HOME -->
         <section id="home" class="screen hero">
-
             <h1>Isiphosendalo Solutions</h1>
-
             <p>Your One-Stop Solution For Digital Needs</p>
-
-            <img
-                class="hero-logo"
-                src="logo.webp"
-                alt="Isiphosendalo Solutions Logo"
-            >
-
+            <img class="hero-logo embedded-logo" alt="Isiphosendalo Solutions Logo">
             <h2>Welcome to Isiphosendalo Solutions</h2>
-
-            <p>
-                We are a leading provider of digital solutions, offering a wide
-                range of services to help businesses thrive in the digital age.
-            </p>
-
-            <p>
-                Our team of experts is dedicated to delivering high-quality
-                services that meet the unique needs of each client.
-            </p>
-
+            <p>We are a leading provider of digital solutions, offering a wide range of services to help businesses thrive in the digital age.</p>
+            <p>Our team of experts is dedicated to delivering high-quality services that meet the unique needs of each client.</p>
         </section>
 
-
-        <!-- ABOUT -->
         <section id="about" class="screen">
-
             <h2>About Us</h2>
-
-            <p>
-                At Isiphosendalo Solutions, we believe in the power of technology
-                to transform businesses. Our mission is to provide innovative
-                solutions that drive success and growth.
-            </p>
-
+            <p>At Isiphosendalo Solutions, we believe in the power of technology to transform businesses. Our mission is to provide innovative solutions that drive success and growth.</p>
         </section>
 
-
-        <!-- SERVICES -->
         <section id="services" class="screen">
-
             <h2>Our Services</h2>
-
             <div class="grid">
-
-                <article class="service-card">
-
-                    <h3>Repairs</h3>
-
-                    <p>
-                        Laptop and desktop support for hardware issues,
-                        upgrades, and troubleshooting.
-                    </p>
-
-                </article>
-
-
-                <article class="service-card">
-
-                    <h3>Software</h3>
-
-                    <p>
-                        Installation, configuration, licensing support,
-                        and routine updates for systems.
-                    </p>
-
-                </article>
-
-
-                <article class="service-card">
-
-                    <h3>Optimization</h3>
-
-                    <p>
-                        Virus removal, performance improvement,
-                        cleaning, and system tune-ups.
-                    </p>
-
-                </article>
-
-
-                <article class="service-card">
-
-                    <h3>Web Solutions</h3>
-
-                    <p>
-                        Website design, development, and digital presence
-                        enhancement for your business.
-                    </p>
-
-                </article>
-
-
-                <article class="service-card">
-
-                    <h3>IT Support</h3>
-
-                    <p>
-                        Professional consulting and dependable support
-                        to keep your technology working.
-                    </p>
-
-                </article>
-
+                <article class="service-card"><h3>Repairs</h3><p>Laptop and desktop support for hardware issues, upgrades, and troubleshooting.</p></article>
+                <article class="service-card"><h3>Software</h3><p>Installation, configuration, licensing support, and routine updates for systems.</p></article>
+                <article class="service-card"><h3>Optimization</h3><p>Virus removal, performance improvement, cleaning, and system tune-ups.</p></article>
+                <article class="service-card"><h3>Web Solutions</h3><p>Website design, development, and digital presence enhancement for your business.</p></article>
+                <article class="service-card"><h3>IT Support</h3><p>Professional consulting and dependable support to keep your technology working.</p></article>
             </div>
-
         </section>
 
-
-        <!-- BOOKING -->
         <section id="booking" class="screen">
-
             <h2>Book an Appointment</h2>
-
             <div class="booking-layout">
-
                 <div class="booking-card">
-
                     <form id="appointmentForm">
-
                         <div class="form-grid">
-
-                            <div>
-                                <label for="full-name">
-                                    Full Name
-                                </label>
-
-                                <input
-                                    id="full-name"
-                                    type="text"
-                                    placeholder="Your name"
-                                    required
-                                >
-                            </div>
-
-
-                            <div>
-                                <label for="phone">
-                                    Phone Number
-                                </label>
-
-                                <input
-                                    id="phone"
-                                    type="tel"
-                                    placeholder="067 736 7860"
-                                    required
-                                >
-                            </div>
-
-
-                            <div>
-                                <label for="service">
-                                    Service
-                                </label>
-
-                                <select id="service">
-
-                                    <option>
-                                        Computer Repair
-                                    </option>
-
-                                    <option>
-                                        Software Installation
-                                    </option>
-
-                                    <option>
-                                        Website Design
-                                    </option>
-
-                                    <option>
-                                        Web Development
-                                    </option>
-
-                                    <option>
-                                        IT Support
-                                    </option>
-
-                                </select>
-                            </div>
-
-
-                            <div>
-
-                                <label for="date">
-                                    Preferred Date
-                                </label>
-
-                                <input
-                                    id="date"
-                                    type="date"
-                                    required
-                                >
-
-                            </div>
-
+                            <div><label for="full-name">Full Name</label><input id="full-name" type="text" placeholder="Your name" required></div>
+                            <div><label for="phone">Phone Number</label><input id="phone" type="tel" placeholder="067 736 7860" required></div>
+                            <div><label for="service">Service</label><select id="service"><option>Computer Repair</option><option>Software Installation</option><option>Website Design</option><option>Web Development</option><option>IT Support</option></select></div>
+                            <div><label for="date">Preferred Date</label><input id="date" type="date" required></div>
                         </div>
-
-
-                        <div style="margin-top: 16px;">
-
-                            <label for="details">
-                                Details
-                            </label>
-
-                            <textarea
-                                id="details"
-                                placeholder="Tell us about your issue or requirement..."
-                                required
-                            ></textarea>
-
-                        </div>
-
-
-                        <button type="submit">
-                            Request Appointment
-                        </button>
-
-
-                        <p
-                            id="formStatus"
-                            aria-live="polite"
-                        ></p>
-
+                        <div style="margin-top: 16px;"><label for="details">Details</label><textarea id="details" placeholder="Tell us about your issue or requirement..." required></textarea></div>
+                        <button type="submit">Request Appointment</button>
+                        <p id="formStatus" aria-live="polite"></p>
                     </form>
-
                 </div>
-
-
                 <div class="booking-card">
-
                     <h3>Appointment Details</h3>
-
                     <ul class="details-list">
-
-                        <li>
-                            <strong>Availability:</strong>
-                            Monday to Saturday
-                        </li>
-
-                        <li>
-                            <strong>Consultation:</strong>
-                            In-person or remote support
-                        </li>
-
-                        <li>
-                            <strong>Response:</strong>
-                            We confirm your request quickly
-                        </li>
-
-                        <li>
-                            <strong>Location:</strong>
-                            Pietermaritzburg, South Africa
-                        </li>
-
+                        <li><strong>Availability:</strong> Monday to Saturday</li>
+                        <li><strong>Consultation:</strong> In-person or remote support</li>
+                        <li><strong>Response:</strong> We confirm your request quickly</li>
+                        <li><strong>Location:</strong> Pietermaritzburg, South Africa</li>
                     </ul>
-
                 </div>
-
             </div>
-
         </section>
 
-
-        <!-- CONTACT -->
         <section id="contact" class="screen">
-
             <h2>Contact Us</h2>
-
-            <p>
-                If you have any questions or would like to learn more about
-                our services, please feel free to reach out to us.
-            </p>
-
-
+            <p>If you have any questions or would like to learn more about our services, please feel free to reach out to us.</p>
             <div class="contact-grid">
-
-                <div class="contact-card">
-
-                    <h3>Address</h3>
-
-                    <address>
-
-                        <strong>
-                            Isiphosendalo Solutions
-                        </strong>
-
-                        <br>
-
-                        Nenzokuhle
-
-                        <br>
-
-                        Pietermaritzburg, 3201
-
-                        <br>
-
-                        South Africa
-
-                    </address>
-
-                </div>
-
-
-                <div class="contact-card">
-
-                    <h3>Reach Us</h3>
-
-                    <p>
-
-                        <strong>Phone:</strong>
-                        <a href="tel:+27677367860">
-                            0677367860
-                        </a>
-
-                        <br>
-
-                        <strong>Email:</strong>
-                        <a href="mailto:isiphosendalo08@gmail.com">
-                            isiphosendalo08@gmail.com
-                        </a>
-
-                        <br>
-
-                        <a
-                            href="https://wa.me/27677367860"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                        >
-                            Chat with us on WhatsApp
-                        </a>
-
-                    </p>
-
-                </div>
-
-
-                <div class="contact-card">
-
-                    <h3>Trading Hours</h3>
-
-                    <p>
-
-                        Monday to Thursday:
-                        08:00 AM - 04:00 PM
-
-                        <br>
-
-                        Friday:
-                        08:00 AM - 03:30 PM
-
-                        <br>
-
-                        Saturday:
-                        10:00 AM - 02:30 PM
-
-                        <br>
-
-                        Sunday:
-                        Closed
-
-                    </p>
-
-                </div>
-
+                <div class="contact-card"><h3>Address</h3><address><strong>Isiphosendalo Solutions</strong><br>Nenzokuhle<br>Pietermaritzburg, 3201<br>South Africa</address></div>
+                <div class="contact-card"><h3>Reach Us</h3><p><strong>Phone:</strong> <a href="tel:+27677367860">0677367860</a><br><strong>Email:</strong> <a href="mailto:isiphosendalo08@gmail.com">isiphosendalo08@gmail.com</a><br><a href="https://wa.me/27677367860" target="_blank" rel="noopener noreferrer">Chat with us on WhatsApp</a></p></div>
+                <div class="contact-card"><h3>Trading Hours</h3><p>Monday to Thursday: 08:00 AM - 04:00 PM<br>Friday: 08:00 AM - 03:30 PM<br>Saturday: 10:00 AM - 02:30 PM<br>Sunday: Closed</p></div>
             </div>
-
         </section>
 
-
-        <!-- WHY CHOOSE US -->
-        <section class="screen">
-
-            <h2>
-                WHY CHOOSE US?
-            </h2>
-
-            <p>
-                Fast | Affordable | Reliable
-            </p>
-
-        </section>
-
+        <section class="screen"><h2>WHY CHOOSE US?</h2><p>Fast | Affordable | Reliable</p></section>
     </main>
 
+    <footer><p>&copy; 2026 Isiphosendalo Solutions. All rights reserved.</p></footer>
 
-    <footer>
-
-        <p>
-            &copy; 2026 Isiphosendalo Solutions.
-            All rights reserved.
-        </p>
-
-    </footer>
-
+    <script>
+        (function () {
+            const logoData = "data:image/webp;base64,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";
+            document.querySelectorAll('.embedded-logo').forEach(function (img) {
+                img.src = logoData;
+            });
+            document.getElementById('siteFavicon').href = logoData;
+        })();
+    </script>
 </body>
 </html>
