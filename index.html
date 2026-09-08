@@ -1,162 +1,444 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Isiphosendalo Solutions</title>
-        <link rel="icon" type="image/webp" href="/logo.webp">
-        <link rel="stylesheet" href="style.css">
-        <script src="script.js" defer></script>
-    </head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <body>
-        <header>
-            <div class="topbar">
-                <div class="brand">
-                    <img src="logo.webp" alt="Isiphosendalo Logo">
-                    <div class="brand-name">Isiphosendalo Solutions</div>
-                </div>
+    <title>Isiphosendalo Solutions</title>
 
-                <nav>
-                    <ul>
-                        <li><a href="#home">Home</a></li>
-                        <li><a href="#about">About Us</a></li>
-                        <li><a href="#services">Services</a></li>
-                        <li><a href="#booking">Book Appointment</a></li>
-                        <li><a href="#contact">Contact Us</a></li>
-                    </ul>
-                </nav>
+    <!-- Favicon -->
+    <link rel="icon" type="image/webp" href="logo.webp">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- JavaScript -->
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+
+    <header>
+        <div class="topbar">
+
+            <div class="brand">
+                <img src="logo.webp" alt="Isiphosendalo Solutions Logo">
+                <div class="brand-name">Isiphosendalo Solutions</div>
             </div>
-        </header>
 
-        <main>
-            <section id="home" class="screen hero">
-                <h1>Isiphosendalo Solutions</h1>
-                <p>Your One-Stop Solution For Digital Needs</p>
-                <img class="hero-logo" src="/logo.webp" alt="Isiphosendalo Logo">
-                <h2>Welcome to Isiphosendalo Solutions</h2>
-                <p>We are a leading provider of digital solutions, offering a wide range of services to help businesses thrive in the digital age.</p>
-                <p>Our team of experts is dedicated to delivering high-quality services that meet the unique needs of each client.</p>
-            </section>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#booking">Book Appointment</a></li>
+                    <li><a href="#contact">Contact Us</a></li>
+                </ul>
+            </nav>
 
-            <section id="about" class="screen">
-                <h2>About Us</h2>
-                <p>At Isiphosendalo Solutions, we believe in the power of technology to transform businesses. Our mission is to provide innovative solutions that drive success and growth.</p>
-            </section>
+        </div>
+    </header>
 
-            <section id="services" class="screen">
-                <h2>Our Services</h2>
-                <div class="grid">
-                    <article class="service-card">
-                        <h3>Repairs</h3>
-                        <p>Laptop and desktop support for hardware issues, upgrades, and troubleshooting.</p>
-                    </article>
-                    <article class="service-card">
-                        <h3>Software</h3>
-                        <p>Installation, configuration, licensing support, and routine updates for systems.</p>
-                    </article>
-                    <article class="service-card">
-                        <h3>Optimization</h3>
-                        <p>Virus removal, performance improvement, cleaning, and system tune-ups.</p>
-                    </article>
-                    <article class="service-card">
-                        <h3>Web Solutions</h3>
-                        <p>Website design, development, and digital presence enhancement for your business.</p>
-                    </article>
-                    <article class="service-card">
-                        <h3>IT Support</h3>
-                        <p>Professional consulting and dependable support to keep your technology working.</p>
-                    </article>
-                </div>
-            </section>
 
-            <section id="booking" class="screen">
-                <h2>Book an Appointment</h2>
-                <div class="booking-layout">
-                    <div class="booking-card">
-                        <form id="appointmentForm">
-                            <div class="form-grid">
-                                <div>
-                                    <label for="full-name">Full Name</label>
-                                    <input id="full-name" type="text" placeholder="Your name" required>
-                                </div>
-                                <div>
-                                    <label for="phone">Phone Number</label>
-                                    <input id="phone" type="tel" placeholder="067 736 7860" required>
-                                </div>
-                                <div>
-                                    <label for="service">Service</label>
-                                    <select id="service">
-                                        <option>Computer Repair</option>
-                                        <option>Software Installation</option>
-                                        <option>Website Design</option>
-                                        <option>Web Development</option>
-                                        <option>IT Support</option>
-                                    </select>
-                                </div>
-                                <div>
-                                    <label for="date">Preferred Date</label>
-                                    <input id="date" type="date" required>
-                                </div>
+    <main>
+
+        <!-- HOME -->
+        <section id="home" class="screen hero">
+
+            <h1>Isiphosendalo Solutions</h1>
+
+            <p>Your One-Stop Solution For Digital Needs</p>
+
+            <img
+                class="hero-logo"
+                src="logo.webp"
+                alt="Isiphosendalo Solutions Logo"
+            >
+
+            <h2>Welcome to Isiphosendalo Solutions</h2>
+
+            <p>
+                We are a leading provider of digital solutions, offering a wide
+                range of services to help businesses thrive in the digital age.
+            </p>
+
+            <p>
+                Our team of experts is dedicated to delivering high-quality
+                services that meet the unique needs of each client.
+            </p>
+
+        </section>
+
+
+        <!-- ABOUT -->
+        <section id="about" class="screen">
+
+            <h2>About Us</h2>
+
+            <p>
+                At Isiphosendalo Solutions, we believe in the power of technology
+                to transform businesses. Our mission is to provide innovative
+                solutions that drive success and growth.
+            </p>
+
+        </section>
+
+
+        <!-- SERVICES -->
+        <section id="services" class="screen">
+
+            <h2>Our Services</h2>
+
+            <div class="grid">
+
+                <article class="service-card">
+
+                    <h3>Repairs</h3>
+
+                    <p>
+                        Laptop and desktop support for hardware issues,
+                        upgrades, and troubleshooting.
+                    </p>
+
+                </article>
+
+
+                <article class="service-card">
+
+                    <h3>Software</h3>
+
+                    <p>
+                        Installation, configuration, licensing support,
+                        and routine updates for systems.
+                    </p>
+
+                </article>
+
+
+                <article class="service-card">
+
+                    <h3>Optimization</h3>
+
+                    <p>
+                        Virus removal, performance improvement,
+                        cleaning, and system tune-ups.
+                    </p>
+
+                </article>
+
+
+                <article class="service-card">
+
+                    <h3>Web Solutions</h3>
+
+                    <p>
+                        Website design, development, and digital presence
+                        enhancement for your business.
+                    </p>
+
+                </article>
+
+
+                <article class="service-card">
+
+                    <h3>IT Support</h3>
+
+                    <p>
+                        Professional consulting and dependable support
+                        to keep your technology working.
+                    </p>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- BOOKING -->
+        <section id="booking" class="screen">
+
+            <h2>Book an Appointment</h2>
+
+            <div class="booking-layout">
+
+                <div class="booking-card">
+
+                    <form id="appointmentForm">
+
+                        <div class="form-grid">
+
+                            <div>
+                                <label for="full-name">
+                                    Full Name
+                                </label>
+
+                                <input
+                                    id="full-name"
+                                    type="text"
+                                    placeholder="Your name"
+                                    required
+                                >
                             </div>
-                            <div style="margin-top: 16px;">
-                                <label for="details">Details</label>
-                                <textarea id="details" placeholder="Tell us about your issue or requirement..." required></textarea>
+
+
+                            <div>
+                                <label for="phone">
+                                    Phone Number
+                                </label>
+
+                                <input
+                                    id="phone"
+                                    type="tel"
+                                    placeholder="067 736 7860"
+                                    required
+                                >
                             </div>
-                            <button type="submit">Request Appointment</button>
-                            <p id="formStatus" aria-live="polite"></p>
-                        </form>
-                    </div>
 
-                    <div class="booking-card">
-                        <h3>Appointment Details</h3>
-                        <ul class="details-list">
-                            <li><strong>Availability:</strong> Monday to Saturday</li>
-                            <li><strong>Consultation:</strong> In-person or remote support</li>
-                            <li><strong>Response:</strong> We confirm your request quickly</li>
-                            <li><strong>Location:</strong> Pietermaritzburg, South Africa</li>
-                        </ul>
-                    </div>
+
+                            <div>
+                                <label for="service">
+                                    Service
+                                </label>
+
+                                <select id="service">
+
+                                    <option>
+                                        Computer Repair
+                                    </option>
+
+                                    <option>
+                                        Software Installation
+                                    </option>
+
+                                    <option>
+                                        Website Design
+                                    </option>
+
+                                    <option>
+                                        Web Development
+                                    </option>
+
+                                    <option>
+                                        IT Support
+                                    </option>
+
+                                </select>
+                            </div>
+
+
+                            <div>
+
+                                <label for="date">
+                                    Preferred Date
+                                </label>
+
+                                <input
+                                    id="date"
+                                    type="date"
+                                    required
+                                >
+
+                            </div>
+
+                        </div>
+
+
+                        <div style="margin-top: 16px;">
+
+                            <label for="details">
+                                Details
+                            </label>
+
+                            <textarea
+                                id="details"
+                                placeholder="Tell us about your issue or requirement..."
+                                required
+                            ></textarea>
+
+                        </div>
+
+
+                        <button type="submit">
+                            Request Appointment
+                        </button>
+
+
+                        <p
+                            id="formStatus"
+                            aria-live="polite"
+                        ></p>
+
+                    </form>
+
                 </div>
-            </section>
 
-            <section id="contact" class="screen">
-                <h2>Contact Us</h2>
-                <p>If you have any questions or would like to learn more about our services, please feel free to reach out to us.</p>
-                <div class="contact-grid">
-                    <div class="contact-card">
-                        <h3>Address</h3>
-                        <address>
-                            <strong>Isiphosendalo Solutions</strong><br>
-                            Nenzokuhle<br>
-                            Pietermaritzburg, 3201<br>
-                            South Africa
-                        </address>
-                    </div>
-                    <div class="contact-card">
-                        <h3>Reach Us</h3>
-                        <p><strong>Phone:</strong> 0677367860<br>
-                        <strong>Email:</strong> <a href="mailto:isiphosendalo08@gmail.com">Email us</a><br>
-                        <a href="https://wa.me/27677367860" target="_blank">Chat with us on WhatsApp</a></p>
-                    </div>
-                    <div class="contact-card">
-                        <h3>Trading Hours</h3>
-                        <p>Monday to Thursday: 08:00 AM - 04:00 PM<br>
-                        Friday: 08:00 AM - 03:30 PM<br>
-                        Saturday: 10:00 AM - 02:30 PM<br>
-                        Sunday: Closed</p>
-                    </div>
+
+                <div class="booking-card">
+
+                    <h3>Appointment Details</h3>
+
+                    <ul class="details-list">
+
+                        <li>
+                            <strong>Availability:</strong>
+                            Monday to Saturday
+                        </li>
+
+                        <li>
+                            <strong>Consultation:</strong>
+                            In-person or remote support
+                        </li>
+
+                        <li>
+                            <strong>Response:</strong>
+                            We confirm your request quickly
+                        </li>
+
+                        <li>
+                            <strong>Location:</strong>
+                            Pietermaritzburg, South Africa
+                        </li>
+
+                    </ul>
+
                 </div>
-            </section>
 
-            <section class="screen">
-                <h2>WHY CHOOSE US?</h2>
-                <p>Fast | Affordable | Reliable</p>
-            </section>
-        </main>
+            </div>
 
-        <footer>
-            <p>&copy; 2026 Isiphosendalo Solutions. All rights reserved.</p>
-        </footer>
-    </body>
+        </section>
+
+
+        <!-- CONTACT -->
+        <section id="contact" class="screen">
+
+            <h2>Contact Us</h2>
+
+            <p>
+                If you have any questions or would like to learn more about
+                our services, please feel free to reach out to us.
+            </p>
+
+
+            <div class="contact-grid">
+
+                <div class="contact-card">
+
+                    <h3>Address</h3>
+
+                    <address>
+
+                        <strong>
+                            Isiphosendalo Solutions
+                        </strong>
+
+                        <br>
+
+                        Nenzokuhle
+
+                        <br>
+
+                        Pietermaritzburg, 3201
+
+                        <br>
+
+                        South Africa
+
+                    </address>
+
+                </div>
+
+
+                <div class="contact-card">
+
+                    <h3>Reach Us</h3>
+
+                    <p>
+
+                        <strong>Phone:</strong>
+                        <a href="tel:+27677367860">
+                            0677367860
+                        </a>
+
+                        <br>
+
+                        <strong>Email:</strong>
+                        <a href="mailto:isiphosendalo08@gmail.com">
+                            isiphosendalo08@gmail.com
+                        </a>
+
+                        <br>
+
+                        <a
+                            href="https://wa.me/27677367860"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            Chat with us on WhatsApp
+                        </a>
+
+                    </p>
+
+                </div>
+
+
+                <div class="contact-card">
+
+                    <h3>Trading Hours</h3>
+
+                    <p>
+
+                        Monday to Thursday:
+                        08:00 AM - 04:00 PM
+
+                        <br>
+
+                        Friday:
+                        08:00 AM - 03:30 PM
+
+                        <br>
+
+                        Saturday:
+                        10:00 AM - 02:30 PM
+
+                        <br>
+
+                        Sunday:
+                        Closed
+
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- WHY CHOOSE US -->
+        <section class="screen">
+
+            <h2>
+                WHY CHOOSE US?
+            </h2>
+
+            <p>
+                Fast | Affordable | Reliable
+            </p>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+
+        <p>
+            &copy; 2026 Isiphosendalo Solutions.
+            All rights reserved.
+        </p>
+
+    </footer>
+
+</body>
 </html>
