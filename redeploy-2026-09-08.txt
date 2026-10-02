@@ -1,1 +1,4 @@
-Trigger Vercel production redeploy after embedding the compressed Isiphosendalo Solutions logo in index.html.
+Vercel redeploy trigger
+
+Latest website redesign committed and ready for production.
+Triggered from GitHub on 2026-10-02.
