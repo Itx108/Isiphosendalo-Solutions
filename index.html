@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Isiphosendalo Solutions builds custom software, SaaS platforms, business systems and modern web applications for organisations and growing businesses.">
     <meta name="theme-color" content="#008080">
-    <title>Isiphosendalo Solutions</title>
+    <title>Isiphosendalo Solutions | Software Development</title>
     <link rel="icon" type="image/webp" href="/logo.webp">
     <link rel="stylesheet" href="/style.css">
     <script src="/script.js" defer></script>
@@ -16,20 +17,18 @@
                 <img src="/logo.webp" alt="Isiphosendalo Solutions Logo">
                 <div class="brand-name">Isiphosendalo Solutions</div>
             </a>
-
             <button class="nav-toggle" id="navToggle" type="button" aria-label="Open navigation menu" aria-expanded="false" aria-controls="siteNav">
-                <span></span>
-                <span></span>
-                <span></span>
+                <span></span><span></span><span></span>
             </button>
-
             <nav id="siteNav" aria-label="Main navigation">
                 <ul>
                     <li><a href="#home">Home</a></li>
-                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#about">About</a></li>
                     <li><a href="#services">Services</a></li>
-                    <li><a href="#booking">Book Appointment</a></li>
-                    <li><a href="#contact">Contact Us</a></li>
+                    <li><a href="#products">Our Work</a></li>
+                    <li><a href="#founder">Founder</a></li>
+                    <li><a href="#booking">Consultation</a></li>
+                    <li><a href="#contact">Contact</a></li>
                 </ul>
             </nav>
         </div>
@@ -37,74 +36,148 @@
 
     <main>
         <section id="home" class="screen hero">
+            <p class="eyebrow">Software Development · SaaS · Business Systems</p>
             <h1>Isiphosendalo Solutions</h1>
-            <p class="tagline">Your One-Stop Solution For Digital Needs</p>
+            <p class="tagline">Software Solutions Built for Real Businesses</p>
             <img class="hero-logo" src="/logo.webp" alt="Isiphosendalo Solutions Logo">
-            <h2>Welcome to Isiphosendalo Solutions</h2>
-            <p>We are a leading provider of digital solutions, offering a wide range of services to help businesses thrive in the digital age.</p>
-            <p>Our team of experts is dedicated to delivering high-quality services that meet the unique needs of each client.</p>
+            <h2>From business problem to working software.</h2>
+            <p>We design and develop practical software solutions that help businesses and organisations manage operations, customers and digital workflows more effectively.</p>
+            <p>Our focus is modern full-stack software: reliable web applications, SaaS platforms, databases, authentication, business workflows and production deployment.</p>
+            <div class="hero-actions">
+                <a class="button-link primary-link" href="#products">View Our Work</a>
+                <a class="button-link secondary-link" href="#booking">Discuss a Project</a>
+            </div>
         </section>
 
         <section id="about" class="screen">
-            <h2>About Us</h2>
-            <p>At Isiphosendalo Solutions, we believe in the power of technology to transform businesses. Our mission is to provide innovative solutions that drive success and growth.</p>
+            <p class="eyebrow">About us</p>
+            <h2>Technology built around real operational needs.</h2>
+            <div class="about-grid">
+                <div>
+                    <p>Isiphosendalo Solutions is a South African technology business focused on building useful, maintainable software for businesses and organisations.</p>
+                    <p>We work beyond basic websites by developing systems that can include authentication, role-based access, databases, bookings, payments, dashboards, offline-ready experiences and other workflows needed to operate a real service.</p>
+                </div>
+                <div class="highlight-card">
+                    <strong>Our approach</strong>
+                    <p>Understand the workflow, design the solution, build the system, deploy it, then improve it through real-world use and feedback.</p>
+                </div>
+            </div>
         </section>
 
         <section id="services" class="screen">
-            <h2>Our Services</h2>
+            <p class="eyebrow">What we build</p>
+            <h2>Software Development Services</h2>
             <div class="grid">
-                <article class="service-card"><h3>Repairs</h3><p>Laptop and desktop support for hardware issues, upgrades, and troubleshooting.</p></article>
-                <article class="service-card"><h3>Software</h3><p>Installation, configuration, licensing support, and routine updates for systems.</p></article>
-                <article class="service-card"><h3>Optimization</h3><p>Virus removal, performance improvement, cleaning, and system tune-ups.</p></article>
-                <article class="service-card"><h3>Web Solutions</h3><p>Website design, development, and digital presence enhancement for your business.</p></article>
-                <article class="service-card"><h3>IT Support</h3><p>Professional consulting and dependable support to keep your technology working.</p></article>
+                <article class="service-card"><span class="card-number">01</span><h3>Custom Software Development</h3><p>Purpose-built systems designed around the way your business or organisation actually operates.</p></article>
+                <article class="service-card"><span class="card-number">02</span><h3>SaaS Development</h3><p>Subscription-ready web platforms with user accounts, role-based access, business workflows and scalable database foundations.</p></article>
+                <article class="service-card"><span class="card-number">03</span><h3>Business Management Systems</h3><p>Digital systems for bookings, staff, customers, payments, reporting, approvals and other operational processes.</p></article>
+                <article class="service-card"><span class="card-number">04</span><h3>Web Application Development</h3><p>Responsive, modern web applications that work across phones, tablets and desktop devices.</p></article>
+                <article class="service-card"><span class="card-number">05</span><h3>Backend & Database Solutions</h3><p>Authentication, PostgreSQL/Supabase databases, secure application workflows, APIs and data-integrity rules.</p></article>
+                <article class="service-card"><span class="card-number">06</span><h3>Deployment & Product Support</h3><p>Production deployment, environment configuration, debugging, updates, maintenance and ongoing product improvement.</p></article>
+            </div>
+        </section>
+
+        <section id="products" class="screen">
+            <p class="eyebrow">Selected work</p>
+            <h2>Software We Build</h2>
+            <p class="section-intro">Our products demonstrate the type of operational software Isiphosendalo Solutions can design, build and maintain.</p>
+            <div class="product-grid">
+                <article class="product-card flagship">
+                    <div class="product-meta"><span>Flagship SaaS Product</span><span>Live</span></div>
+                    <h3>CutFlow</h3>
+                    <p>A salon and barber operations platform that brings together appointments, staff scheduling, customers, services, POS, inventory, memberships, vouchers, commissions and business reporting.</p>
+                    <ul class="feature-list">
+                        <li>Database-level protection against overlapping staff bookings</li>
+                        <li>Live appointment availability and rescheduling</li>
+                        <li>Supabase/PostgreSQL backend</li>
+                        <li>Customer privacy and de-identification rules</li>
+                        <li>Installable PWA/offline shell</li>
+                        <li>Production deployment through Vercel</li>
+                    </ul>
+                    <div class="product-actions">
+                        <a class="button-link primary-link" href="https://cutflow.co.za" target="_blank" rel="noopener noreferrer">Visit CutFlow</a>
+                        <a class="button-link secondary-link" href="https://github.com/Itx108/Cutflow" target="_blank" rel="noopener noreferrer">Engineering Case Study</a>
+                    </div>
+                </article>
+
+                <article class="product-card">
+                    <div class="product-meta"><span>School Management</span><span>Private Source</span></div>
+                    <h3>EduManage</h3>
+                    <p>A school-management system built around role-based access for administrators, teachers and parents, with approval workflows, payments, database tooling, deployment checks and mobile-ready support.</p>
+                    <ul class="feature-list">
+                        <li>Role-based access and user approval workflows</li>
+                        <li>School administration and operational dashboards</li>
+                        <li>Payments and subscription-related workflows</li>
+                        <li>PostgreSQL/Neon database architecture</li>
+                        <li>Mobile-ready support with Capacitor</li>
+                    </ul>
+                </article>
+            </div>
+        </section>
+
+        <section id="technology" class="screen">
+            <p class="eyebrow">Technology</p>
+            <h2>Tools Behind Our Software</h2>
+            <div class="tech-grid">
+                <div class="tech-card"><strong>Frontend</strong><span>Next.js, React, JavaScript, HTML, CSS</span></div>
+                <div class="tech-card"><strong>Backend & Database</strong><span>Supabase, PostgreSQL, Neon, APIs</span></div>
+                <div class="tech-card"><strong>Product Engineering</strong><span>Authentication, role-based access, PWA/offline workflows, database migrations</span></div>
+                <div class="tech-card"><strong>Deployment</strong><span>GitHub, Vercel, Capacitor, production debugging and maintenance</span></div>
+            </div>
+        </section>
+
+        <section id="founder" class="screen">
+            <p class="eyebrow">Founder</p>
+            <div class="founder-layout">
+                <div>
+                    <h2>Xolo Dlamini</h2>
+                    <p class="founder-title">Software Developer · Full-Stack Builder · Founder</p>
+                    <p>Xolo is an Information Technology student at Mangosuthu University of Technology and the founder of Isiphosendalo Solutions.</p>
+                    <p>His work focuses on building practical full-stack systems, SaaS products and business applications while developing deeper skills in software architecture, databases, security, testing, CI/CD and production reliability.</p>
+                </div>
+                <div class="founder-links">
+                    <a href="https://github.com/Itx108" target="_blank" rel="noopener noreferrer">GitHub Profile</a>
+                    <a href="https://github.com/Itx108/Xolo-s-Portfolio" target="_blank" rel="noopener noreferrer">Developer Portfolio</a>
+                    <a href="https://www.linkedin.com/in/xolo-dlamini-74066734b" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                </div>
             </div>
         </section>
 
         <section id="booking" class="screen">
-            <h2>Book an Appointment</h2>
+            <p class="eyebrow">Start a project</p>
+            <h2>Book a Software Consultation</h2>
+            <p class="section-intro">Tell us what you want to build or improve. We can discuss the workflow, users, features and technical direction before development starts.</p>
             <div class="booking-layout">
                 <div class="booking-card">
                     <form id="appointmentForm">
                         <div class="form-grid">
+                            <div><label for="full-name">Full Name</label><input id="full-name" type="text" placeholder="Your name" autocomplete="name" required></div>
+                            <div><label for="phone">Phone Number</label><input id="phone" type="tel" placeholder="067 736 7860" autocomplete="tel" inputmode="tel" required></div>
                             <div>
-                                <label for="full-name">Full Name</label>
-                                <input id="full-name" type="text" placeholder="Your name" autocomplete="name" required>
-                            </div>
-                            <div>
-                                <label for="phone">Phone Number</label>
-                                <input id="phone" type="tel" placeholder="067 736 7860" autocomplete="tel" inputmode="tel" required>
-                            </div>
-                            <div>
-                                <label for="service">Service</label>
+                                <label for="service">What do you need?</label>
                                 <select id="service">
-                                    <option>Computer Repair</option>
-                                    <option>Software Installation</option>
-                                    <option>Website Design</option>
-                                    <option>Web Development</option>
-                                    <option>IT Support</option>
+                                    <option>Custom Software / System Development</option>
+                                    <option>SaaS Platform Development</option>
+                                    <option>Business Management System</option>
+                                    <option>Web Application Development</option>
+                                    <option>Backend / Database Development</option>
+                                    <option>Existing System Improvement</option>
+                                    <option>Software Consultation</option>
                                 </select>
                             </div>
-                            <div>
-                                <label for="date">Preferred Date</label>
-                                <input id="date" type="date" required>
-                            </div>
+                            <div><label for="date">Preferred Date</label><input id="date" type="date" required></div>
                         </div>
-                        <div class="details-field">
-                            <label for="details">Details</label>
-                            <textarea id="details" placeholder="Tell us about your issue or requirement..." required></textarea>
-                        </div>
-                        <button type="submit">Request Appointment</button>
+                        <div class="details-field"><label for="details">Project Details</label><textarea id="details" placeholder="Tell us about your business, the problem you want to solve, users and important features..." required></textarea></div>
+                        <button type="submit">Request Consultation</button>
                         <p id="formStatus" aria-live="polite"></p>
                     </form>
                 </div>
-
                 <div class="booking-card">
-                    <h3>Appointment Details</h3>
+                    <h3>Consultation Details</h3>
                     <ul class="details-list">
                         <li><strong>Availability:</strong> Monday to Saturday</li>
-                        <li><strong>Consultation:</strong> In-person or remote support</li>
-                        <li><strong>Response:</strong> We confirm your request quickly</li>
+                        <li><strong>Format:</strong> Remote or in-person consultation</li>
+                        <li><strong>Discussion:</strong> Requirements, features, workflow and technical direction</li>
                         <li><strong>Location:</strong> Pietermaritzburg, South Africa</li>
                     </ul>
                 </div>
@@ -112,32 +185,25 @@
         </section>
 
         <section id="contact" class="screen">
-            <h2>Contact Us</h2>
-            <p>If you have any questions or would like to learn more about our services, please feel free to reach out to us.</p>
+            <p class="eyebrow">Contact</p>
+            <h2>Let’s Build Something Useful</h2>
+            <p>Whether you need a new business system, SaaS product, web application or improvements to an existing workflow, contact Isiphosendalo Solutions to discuss the project.</p>
             <div class="contact-grid">
-                <div class="contact-card">
-                    <h3>Address</h3>
-                    <address><strong>Isiphosendalo Solutions</strong><br>Nenzokuhle<br>Pietermaritzburg, 3201<br>South Africa</address>
-                </div>
-                <div class="contact-card">
-                    <h3>Reach Us</h3>
-                    <p><strong>Phone:</strong> <a href="tel:+27677367860">0677367860</a><br><strong>Email:</strong> <a href="mailto:isiphosendalo08@gmail.com">isiphosendalo08@gmail.com</a><br><a href="https://wa.me/27677367860" target="_blank" rel="noopener noreferrer">Chat with us on WhatsApp</a></p>
-                </div>
-                <div class="contact-card">
-                    <h3>Trading Hours</h3>
-                    <p>Monday to Thursday: 08:00 AM - 04:00 PM<br>Friday: 08:00 AM - 03:30 PM<br>Saturday: 10:00 AM - 02:30 PM<br>Sunday: Closed</p>
-                </div>
+                <div class="contact-card"><h3>Location</h3><address><strong>Isiphosendalo Solutions</strong><br>Nenzokuhle<br>Pietermaritzburg, 3201<br>South Africa</address></div>
+                <div class="contact-card"><h3>Reach Us</h3><p><strong>Phone:</strong> <a href="tel:+27677367860">067 736 7860</a><br><strong>Email:</strong> <a href="mailto:isiphosendalo08@gmail.com">isiphosendalo08@gmail.com</a><br><a href="https://wa.me/27677367860" target="_blank" rel="noopener noreferrer">Chat on WhatsApp</a></p></div>
+                <div class="contact-card"><h3>Trading Hours</h3><p>Monday to Thursday: 08:00 AM - 04:00 PM<br>Friday: 08:00 AM - 03:30 PM<br>Saturday: 10:00 AM - 02:30 PM<br>Sunday: Closed</p></div>
             </div>
         </section>
 
         <section class="screen why-us">
-            <h2>WHY CHOOSE US?</h2>
-            <p>Fast <span>•</span> Affordable <span>•</span> Reliable</p>
+            <p class="eyebrow">Why Isiphosendalo Solutions</p>
+            <h2>Practical software. Clear workflows. Real business value.</h2>
+            <p>Full-stack development <span>•</span> Production deployment <span>•</span> Ongoing improvement</p>
         </section>
     </main>
 
     <footer>
-        <p>&copy; 2026 Isiphosendalo Solutions. All rights reserved.</p>
+        <p>&copy; 2026 Isiphosendalo Solutions. Software development for real-world business needs.</p>
     </footer>
 </body>
 </html>
