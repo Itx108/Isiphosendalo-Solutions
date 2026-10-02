@@ -1,6 +1,6 @@
 # Isiphosendalo Solutions
 
-Website for Isiphosendalo Solutions, a South African software-development business focused on custom software, SaaS platforms, business systems and modern web applications.
+Website for Isiphosendalo Solutions, a South African software-development business focused on professional business websites, custom software, SaaS platforms, business systems and modern web applications.
 
 ## Positioning
 
@@ -8,10 +8,11 @@ Isiphosendalo Solutions now presents itself as a software-development company ra
 
 The business focuses on:
 
+- Professional website development and digital presence
 - Custom software development
 - SaaS platform development
 - Business management systems
-- Responsive web applications
+- Responsive business websites and web applications
 - Backend and database solutions
 - Authentication and role-based workflows
 - Deployment, debugging, maintenance and product improvement
@@ -36,7 +37,7 @@ Next.js · React · JavaScript · HTML · CSS · Supabase · PostgreSQL · Neon 
 ## Website features
 
 - Responsive company landing page
-- Software-development service overview
+- Website and software-development service overview
 - Product showcase
 - CutFlow flagship case study links
 - EduManage overview
