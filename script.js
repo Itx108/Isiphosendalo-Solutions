@@ -18,20 +18,37 @@ document.addEventListener('DOMContentLoaded', () => {
             navToggle.setAttribute('aria-label', isOpen ? 'Close navigation menu' : 'Open navigation menu');
         });
 
-        siteNav.querySelectorAll('a').forEach((link) => {
-            link.addEventListener('click', closeMenu);
-        });
+        siteNav.querySelectorAll('a').forEach((link) => link.addEventListener('click', closeMenu));
 
         window.addEventListener('resize', () => {
-            if (window.innerWidth > 768) {
-                closeMenu();
-            }
+            if (window.innerWidth > 1020) closeMenu();
         });
+    }
+
+    const revealTargets = document.querySelectorAll(
+        '.screen, .service-card, .product-card, .tech-card, .contact-card'
+    );
+
+    if ('IntersectionObserver' in window && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        revealTargets.forEach((item) => item.classList.add('reveal'));
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.08 });
+        revealTargets.forEach((item) => observer.observe(item));
+    }
+
+    const dateInput = document.getElementById('date');
+    if (dateInput) {
+        dateInput.min = new Date().toISOString().split('T')[0];
     }
 
     const form = document.getElementById('appointmentForm');
     const status = document.getElementById('formStatus');
-
     if (!form) return;
 
     form.addEventListener('submit', async (event) => {
@@ -42,16 +59,17 @@ document.addEventListener('DOMContentLoaded', () => {
         const service = document.getElementById('service').value;
         const date = document.getElementById('date').value;
         const details = document.getElementById('details').value.trim();
+        const submitButton = form.querySelector('button[type="submit"]');
 
         if (!fullName || !phone || !date || !details) {
-            if (status) {
-                status.textContent = 'Please complete all required appointment fields.';
-            }
+            if (status) status.textContent = 'Please complete all required consultation fields.';
             return;
         }
 
-        if (status) {
-            status.textContent = 'Sending appointment details...';
+        if (status) status.textContent = 'Sending your consultation request...';
+        if (submitButton) {
+            submitButton.disabled = true;
+            submitButton.textContent = 'Sending...';
         }
 
         try {
@@ -63,32 +81,29 @@ document.addEventListener('DOMContentLoaded', () => {
                 },
                 body: JSON.stringify({
                     name: fullName,
-                    phone: phone,
-                    service: service,
-                    date: date,
-                    details: details,
-                    _subject: `Appointment Request - ${service}`,
+                    phone,
+                    service,
+                    date,
+                    details,
+                    _subject: `Software Consultation Request - ${service}`,
                     _captcha: 'false',
                     _template: 'table'
                 })
             });
 
             const result = await response.json().catch(() => ({}));
+            if (!response.ok) throw new Error(result.error || 'Failed to submit consultation request');
 
-            if (!response.ok) {
-                throw new Error(result.error || 'Failed to submit appointment');
-            }
-
-            if (status) {
-                status.textContent = 'Appointment submitted successfully. Please check your email.';
-            }
-
+            if (status) status.textContent = 'Consultation request sent successfully. We will contact you using the details provided.';
             form.reset();
+            if (dateInput) dateInput.min = new Date().toISOString().split('T')[0];
         } catch (error) {
             console.error(error);
-
-            if (status) {
-                status.textContent = 'There was a problem submitting your appointment. Please try again or use your email app.';
+            if (status) status.textContent = 'There was a problem sending your request. Please try again or contact us by email or WhatsApp.';
+        } finally {
+            if (submitButton) {
+                submitButton.disabled = false;
+                submitButton.textContent = 'Request Consultation';
             }
         }
     });
