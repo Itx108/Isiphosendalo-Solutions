@@ -1,35 +1,61 @@
 # Isiphosendalo Solutions
 
-Website for Isiphosendalo Solutions, a technology business providing digital and IT services.
+Website for Isiphosendalo Solutions, a South African software-development business focused on custom software, SaaS platforms, business systems and modern web applications.
+
+## Positioning
+
+Isiphosendalo Solutions now presents itself as a software-development company rather than a computer-repair or software-installation service.
+
+The business focuses on:
+
+- Custom software development
+- SaaS platform development
+- Business management systems
+- Responsive web applications
+- Backend and database solutions
+- Authentication and role-based workflows
+- Deployment, debugging, maintenance and product improvement
+
+## Featured work
+
+### CutFlow
+A live salon and barber operations platform covering appointments, staff scheduling, customers, services, POS, inventory, memberships, vouchers, commissions and business reporting.
+
+Live product: https://cutflow.co.za  
+Engineering case study: https://github.com/Itx108/Cutflow
+
+### EduManage
+A school-management system with role-based access, approval workflows, payments, database tooling, deployment checks and mobile-ready support.
+
+The source repository is private.
+
+## Technology
+
+Next.js · React · JavaScript · HTML · CSS · Supabase · PostgreSQL · Neon · GitHub · Vercel · Capacitor
 
 ## Website features
 
-- Responsive business landing page
-- Service overview for repairs, software, optimisation, web solutions and IT support
-- Appointment-request form
+- Responsive company landing page
+- Software-development service overview
+- Product showcase
+- CutFlow flagship case study links
+- EduManage overview
+- Founder section
+- Technology stack section
+- Software-consultation request form
 - Contact and WhatsApp actions
 - Mobile navigation
-- Static assets optimised for web delivery
-- Vercel/Firebase deployment configuration
-
-## Stack
-
-HTML · CSS · JavaScript · Node.js
 
 ## Local development
 
-For the static site, open `index.html` directly or run a lightweight local web server.
-
-If using the Node server:
+Open `index.html` directly or run the included Node server:
 
 ```bash
 node server.js
 ```
 
-## Repository notes
-
-`index.html`, `style.css` and `script.js` contain the main client-facing website. Deployment configuration is kept in `vercel.json` and `firebase.json`.
-
 ## Author
 
-Xolo Dlamini — https://github.com/Itx108
+Xolo Dlamini — Software Developer and Founder  
+GitHub: https://github.com/Itx108  
+Portfolio: https://github.com/Itx108/Xolo-s-Portfolio
